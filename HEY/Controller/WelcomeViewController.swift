@@ -7,8 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class WelcomeViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
