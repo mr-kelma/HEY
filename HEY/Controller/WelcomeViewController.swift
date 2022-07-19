@@ -6,14 +6,18 @@
 //
 
 import UIKit
+import CLTypingLabel
 
 class WelcomeViewController: UIViewController {
 
-    @IBOutlet weak var titleLabel: UIImageView!
+    
+    @IBOutlet weak var textLabel: CLTypingLabel!
+    @IBOutlet weak var imageLabel: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        rotateView(targetView: titleLabel)
+        textLabel.text = "Let's communicate!"
+        rotateView(targetView: imageLabel)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

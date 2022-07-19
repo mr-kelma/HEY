@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		226D8FB9DB4A067779778C18 /* Pods_HEY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C468169A65EA90FC7A99B7A /* Pods_HEY.framework */; };
 		70AE8E7A287DF2CB0003AE4A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AE8E79287DF2CB0003AE4A /* RegisterViewController.swift */; };
 		70AE8E7C287DF3C40003AE4A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AE8E7B287DF3C40003AE4A /* LoginViewController.swift */; };
 		70AE8E7E287DF4470003AE4A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AE8E7D287DF4470003AE4A /* ChatViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C468169A65EA90FC7A99B7A /* Pods_HEY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HEY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70AE8E79287DF2CB0003AE4A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		70AE8E7B287DF3C40003AE4A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		70AE8E7D287DF4470003AE4A /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +32,8 @@
 		70D16989287C302F00D2A971 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70D1698C287C302F00D2A971 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70D1698E287C302F00D2A971 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFEDBA2E927A7D3C7E488293 /* Pods-HEY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HEY.debug.xcconfig"; path = "Target Support Files/Pods-HEY/Pods-HEY.debug.xcconfig"; sourceTree = "<group>"; };
+		F9A8FAB1E8D349AEA5A04B66 /* Pods-HEY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HEY.release.xcconfig"; path = "Target Support Files/Pods-HEY/Pods-HEY.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,12 +41,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				226D8FB9DB4A067779778C18 /* Pods_HEY.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		047082ADF2625CCA8F7BB62C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C468169A65EA90FC7A99B7A /* Pods_HEY.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		70CBAC27287C34470050452A /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +87,8 @@
 			children = (
 				70D1697F287C302C00D2A971 /* HEY */,
 				70D1697E287C302C00D2A971 /* Products */,
+				FA0CDFB7935D41DC97AD9844 /* Pods */,
+				047082ADF2625CCA8F7BB62C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +115,16 @@
 			path = HEY;
 			sourceTree = "<group>";
 		};
+		FA0CDFB7935D41DC97AD9844 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EFEDBA2E927A7D3C7E488293 /* Pods-HEY.debug.xcconfig */,
+				F9A8FAB1E8D349AEA5A04B66 /* Pods-HEY.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -107,9 +132,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 70D16991287C302F00D2A971 /* Build configuration list for PBXNativeTarget "HEY" */;
 			buildPhases = (
+				A47055A7C0CE5A2A8E5A3863 /* [CP] Check Pods Manifest.lock */,
 				70D16979287C302C00D2A971 /* Sources */,
 				70D1697A287C302C00D2A971 /* Frameworks */,
 				70D1697B287C302C00D2A971 /* Resources */,
+				D59556E7544EC0415CBA647A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -165,6 +192,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A47055A7C0CE5A2A8E5A3863 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HEY-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D59556E7544EC0415CBA647A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HEY/Pods-HEY-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HEY/Pods-HEY-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HEY/Pods-HEY-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		70D16979287C302C00D2A971 /* Sources */ = {
@@ -318,6 +387,7 @@
 		};
 		70D16992287C302F00D2A971 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFEDBA2E927A7D3C7E488293 /* Pods-HEY.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -346,6 +416,7 @@
 		};
 		70D16993287C302F00D2A971 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9A8FAB1E8D349AEA5A04B66 /* Pods-HEY.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

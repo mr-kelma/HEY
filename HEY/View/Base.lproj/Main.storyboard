@@ -56,9 +56,21 @@
                                             <constraint firstAttribute="width" constant="300" id="mKs-xN-3fA"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's communicate!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oOc-5K-whA" customClass="CLTypingLabel" customModule="CLTypingLabel">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="59"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="59" id="Fjq-Rk-S4c"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="oOc-5K-whA" firstAttribute="leading" secondItem="kUb-Qy-fBd" secondAttribute="leading" id="U0C-35-3mb"/>
                                     <constraint firstItem="R4f-Al-yHm" firstAttribute="centerX" secondItem="kUb-Qy-fBd" secondAttribute="centerX" id="ZbX-j5-Ty3"/>
+                                    <constraint firstAttribute="trailing" secondItem="oOc-5K-whA" secondAttribute="trailing" id="agB-b8-Gxm"/>
+                                    <constraint firstItem="oOc-5K-whA" firstAttribute="top" secondItem="kUb-Qy-fBd" secondAttribute="top" id="c5j-i6-V1j"/>
                                     <constraint firstItem="R4f-Al-yHm" firstAttribute="centerY" secondItem="kUb-Qy-fBd" secondAttribute="centerY" id="xRp-Ep-vNG"/>
                                 </constraints>
                             </view>
@@ -80,7 +92,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="9qs-vt-ytN"/>
                     <connections>
-                        <outlet property="titleLabel" destination="R4f-Al-yHm" id="Uqe-5L-1Mv"/>
+                        <outlet property="imageLabel" destination="R4f-Al-yHm" id="Uqe-5L-1Mv"/>
+                        <outlet property="textLabel" destination="oOc-5K-whA" id="1ab-2O-8bk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fJP-hI-Qyk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -408,7 +421,7 @@
             <color red="0.98000001907348633" green="0.9649999737739563" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BrandLigtBlue">
-            <color red="0.1647058824" green="0.78039215689999997" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.16500000655651093" green="0.77999997138977051" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
