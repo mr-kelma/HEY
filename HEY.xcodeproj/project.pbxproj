@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		226D8FB9DB4A067779778C18 /* Pods_HEY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C468169A65EA90FC7A99B7A /* Pods_HEY.framework */; };
+		707E520F2886E42800C4A75B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 707E520E2886E42800C4A75B /* GoogleService-Info.plist */; };
 		70AE8E7A287DF2CB0003AE4A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AE8E79287DF2CB0003AE4A /* RegisterViewController.swift */; };
 		70AE8E7C287DF3C40003AE4A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AE8E7B287DF3C40003AE4A /* LoginViewController.swift */; };
 		70AE8E7E287DF4470003AE4A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AE8E7D287DF4470003AE4A /* ChatViewController.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		4C468169A65EA90FC7A99B7A /* Pods_HEY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HEY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		707E520E2886E42800C4A75B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		70AE8E79287DF2CB0003AE4A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		70AE8E7B287DF3C40003AE4A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		70AE8E7D287DF4470003AE4A /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				70D16989287C302F00D2A971 /* Assets.xcassets */,
 				70D1698B287C302F00D2A971 /* LaunchScreen.storyboard */,
 				70D1698E287C302F00D2A971 /* Info.plist */,
+				707E520E2886E42800C4A75B /* GoogleService-Info.plist */,
 			);
 			path = HEY;
 			sourceTree = "<group>";
@@ -121,7 +124,6 @@
 				EFEDBA2E927A7D3C7E488293 /* Pods-HEY.debug.xcconfig */,
 				F9A8FAB1E8D349AEA5A04B66 /* Pods-HEY.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -186,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70D1698D287C302F00D2A971 /* LaunchScreen.storyboard in Resources */,
+				707E520F2886E42800C4A75B /* GoogleService-Info.plist in Resources */,
 				70D1698A287C302F00D2A971 /* Assets.xcassets in Resources */,
 				70D16988287C302C00D2A971 /* Main.storyboard in Resources */,
 			);
