@@ -16,7 +16,7 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        textLabel.text = "Let's communicate!"
+        textLabel.text = K.greeting
         rotateView(targetView: imageLabel)
     }
     

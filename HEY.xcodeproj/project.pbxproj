@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		226D8FB9DB4A067779778C18 /* Pods_HEY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C468169A65EA90FC7A99B7A /* Pods_HEY.framework */; };
+		7005C1EA2888229E00A80B75 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7005C1E92888229E00A80B75 /* Constants.swift */; };
 		707E520F2886E42800C4A75B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 707E520E2886E42800C4A75B /* GoogleService-Info.plist */; };
 		70AE8E7A287DF2CB0003AE4A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AE8E79287DF2CB0003AE4A /* RegisterViewController.swift */; };
 		70AE8E7C287DF3C40003AE4A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AE8E7B287DF3C40003AE4A /* LoginViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		4C468169A65EA90FC7A99B7A /* Pods_HEY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HEY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7005C1E92888229E00A80B75 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		707E520E2886E42800C4A75B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		70AE8E79287DF2CB0003AE4A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		70AE8E7B287DF3C40003AE4A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				70D1698B287C302F00D2A971 /* LaunchScreen.storyboard */,
 				70D1698E287C302F00D2A971 /* Info.plist */,
 				707E520E2886E42800C4A75B /* GoogleService-Info.plist */,
+				7005C1E92888229E00A80B75 /* Constants.swift */,
 			);
 			path = HEY;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				70D16981287C302C00D2A971 /* AppDelegate.swift in Sources */,
 				70D16983287C302C00D2A971 /* SceneDelegate.swift in Sources */,
 				70AE8E7C287DF3C40003AE4A /* LoginViewController.swift in Sources */,
+				7005C1EA2888229E00A80B75 /* Constants.swift in Sources */,
 				70AE8E7E287DF4470003AE4A /* ChatViewController.swift in Sources */,
 				70AE8E7A287DF2CB0003AE4A /* RegisterViewController.swift in Sources */,
 			);
