@@ -70,8 +70,8 @@
 			isa = PBXGroup;
 			children = (
 				70D16984287C302C00D2A971 /* WelcomeViewController.swift */,
-				70AE8E79287DF2CB0003AE4A /* RegisterViewController.swift */,
 				70AE8E7B287DF3C40003AE4A /* LoginViewController.swift */,
+				70AE8E79287DF2CB0003AE4A /* RegisterViewController.swift */,
 				70AE8E7D287DF4470003AE4A /* ChatViewController.swift */,
 			);
 			path = Controller;

@@ -19,31 +19,31 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iL4-qT-JD1">
                                 <rect key="frame" x="0.0" y="812" width="414" height="50"/>
-                                <color key="backgroundColor" name="BrandLigtBlue"/>
+                                <color key="backgroundColor" name="BrandBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="lQa-WO-A6O"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Log In">
-                                    <color key="titleColor" name="BrandBlue"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" name="BrandLight"/>
                                 </state>
                                 <connections>
-                                    <segue destination="gac-2c-dLA" kind="show" identifier="goToLoginIn" id="jUv-Hs-MGv"/>
+                                    <segue destination="vSa-id-FKH" kind="show" id="DJZ-3y-JKG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbn-WW-FwU">
                                 <rect key="frame" x="0.0" y="754" width="414" height="50"/>
-                                <color key="backgroundColor" name="BrandBlue"/>
+                                <color key="backgroundColor" name="BrandLigtBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="aK0-1W-hdA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Register">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleColor" name="BrandLight"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vSa-id-FKH" kind="show" identifier="goToRegistration" id="DXD-4Q-aeY"/>
+                                    <segue destination="gac-2c-dLA" kind="show" id="tFk-AA-Ocp"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kUb-Qy-fBd">
@@ -144,7 +144,6 @@
                                         </state>
                                         <connections>
                                             <action selector="registerPressed:" destination="vSa-id-FKH" eventType="touchUpInside" id="hao-gB-xhO"/>
-                                            <segue destination="4R2-26-XW7" kind="show" identifier="fromRegictrationToChat" id="BeC-dI-xqa"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="biM-Re-A9W">
@@ -189,11 +188,12 @@
                     <connections>
                         <outlet property="emailTextfield" destination="F49-NH-LQK" id="8J9-fe-gka"/>
                         <outlet property="passwordTextfield" destination="VPy-Rd-tXz" id="LJa-ik-UUg"/>
+                        <segue destination="4R2-26-XW7" kind="show" identifier="fromRegitrastionToChat" id="F3t-5D-B6y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P2W-hc-mZ0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1857.9710144927537" y="-295.3125"/>
+            <point key="canvasLocation" x="1832" y="608"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Jbp-wM-n7N">
@@ -248,7 +248,6 @@
                                         </state>
                                         <connections>
                                             <action selector="loginPressed:" destination="gac-2c-dLA" eventType="touchUpInside" id="jqw-mj-Rl3"/>
-                                            <segue destination="4R2-26-XW7" kind="show" identifier="fromLogInToChat" id="efK-be-3gc"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -284,11 +283,12 @@
                     <connections>
                         <outlet property="emailTextfield" destination="zjH-gr-hJ0" id="Ou6-ST-JKE"/>
                         <outlet property="passwordTextfield" destination="qCS-jc-6Ya" id="Rj5-9U-Zvk"/>
+                        <segue destination="4R2-26-XW7" kind="show" identifier="fromLoginToChat" id="w1n-vk-TOP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AE7-8V-zf7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1857.9710144927537" y="643.52678571428567"/>
+            <point key="canvasLocation" x="1832" y="-310"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="8QT-84-HtN">
@@ -375,7 +375,13 @@
                             <constraint firstItem="f2J-Q1-1gF" firstAttribute="trailing" secondItem="R96-my-Wg6" secondAttribute="trailing" id="pfl-2J-auQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="AmB-hw-spS"/>
+                    <navigationItem key="navigationItem" id="AmB-hw-spS">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="escape" catalog="system" id="WtZ-YL-iUt">
+                            <connections>
+                                <action selector="logOutPressed:" destination="4R2-26-XW7" id="gGZ-KJ-FDB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="messageTextfield" destination="Nr2-7w-p9J" id="1Zz-0R-BXi"/>
                         <outlet property="tableView" destination="NLR-YL-tca" id="heL-eu-NQ5"/>
@@ -404,11 +410,15 @@
             <point key="canvasLocation" x="-86.956521739130437" y="134.59821428571428"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="oOc-5K-whA"/>
+    </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="efK-be-3gc"/>
+        <segue reference="F3t-5D-B6y"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="HEY Logo" width="170.5" height="170.5"/>
+        <image name="escape" catalog="system" width="128" height="121"/>
         <image name="paperplane" catalog="system" width="128" height="118"/>
         <image name="textfield" width="298" height="93"/>
         <namedColor name="BrandBlue">
@@ -416,6 +426,9 @@
         </namedColor>
         <namedColor name="BrandDarkBlue">
             <color red="0.13300000131130219" green="0.18799999356269836" blue="0.37599998712539673" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="BrandLight">
+            <color red="0.98000001907348633" green="0.9649999737739563" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BrandLightPurple">
             <color red="0.98000001907348633" green="0.9649999737739563" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
