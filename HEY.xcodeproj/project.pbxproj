@@ -19,6 +19,9 @@
 		70D16988287C302C00D2A971 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70D16986287C302C00D2A971 /* Main.storyboard */; };
 		70D1698A287C302F00D2A971 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70D16989287C302F00D2A971 /* Assets.xcassets */; };
 		70D1698D287C302F00D2A971 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70D1698B287C302F00D2A971 /* LaunchScreen.storyboard */; };
+		70FB6C0028B4BD5C0094E36B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FB6BFF28B4BD5C0094E36B /* Message.swift */; };
+		70FB6C0328B4C4D40094E36B /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FB6C0128B4C4D40094E36B /* MessageCell.swift */; };
+		70FB6C0428B4C4D40094E36B /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70FB6C0228B4C4D40094E36B /* MessageCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		70D16989287C302F00D2A971 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70D1698C287C302F00D2A971 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70D1698E287C302F00D2A971 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70FB6BFF28B4BD5C0094E36B /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		70FB6C0128B4C4D40094E36B /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		70FB6C0228B4C4D40094E36B /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		EFEDBA2E927A7D3C7E488293 /* Pods-HEY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HEY.debug.xcconfig"; path = "Target Support Files/Pods-HEY/Pods-HEY.debug.xcconfig"; sourceTree = "<group>"; };
 		F9A8FAB1E8D349AEA5A04B66 /* Pods-HEY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HEY.release.xcconfig"; path = "Target Support Files/Pods-HEY/Pods-HEY.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,6 +70,8 @@
 			isa = PBXGroup;
 			children = (
 				70D16986287C302C00D2A971 /* Main.storyboard */,
+				70FB6C0128B4C4D40094E36B /* MessageCell.swift */,
+				70FB6C0228B4C4D40094E36B /* MessageCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -82,6 +90,7 @@
 		70CBAC29287C34610050452A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				70FB6BFF28B4BD5C0094E36B /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -190,6 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70FB6C0428B4C4D40094E36B /* MessageCell.xib in Resources */,
 				70D1698D287C302F00D2A971 /* LaunchScreen.storyboard in Resources */,
 				707E520F2886E42800C4A75B /* GoogleService-Info.plist in Resources */,
 				70D1698A287C302F00D2A971 /* Assets.xcassets in Resources */,
@@ -251,8 +261,10 @@
 				70D16983287C302C00D2A971 /* SceneDelegate.swift in Sources */,
 				70AE8E7C287DF3C40003AE4A /* LoginViewController.swift in Sources */,
 				7005C1EA2888229E00A80B75 /* Constants.swift in Sources */,
+				70FB6C0028B4BD5C0094E36B /* Message.swift in Sources */,
 				70AE8E7E287DF4470003AE4A /* ChatViewController.swift in Sources */,
 				70AE8E7A287DF2CB0003AE4A /* RegisterViewController.swift in Sources */,
+				70FB6C0328B4C4D40094E36B /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
