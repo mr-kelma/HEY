@@ -11,13 +11,15 @@ import FirebaseFirestore
 
 class ChatViewController: UIViewController {
     
+    //MARK: - Views
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextfield: UITextField!
     
+    //MARK: - Properties
     let db = Firestore.firestore()
-    
     var messages: [Message] = []
     
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -27,8 +29,11 @@ class ChatViewController: UIViewController {
         loadMessages()
     }
     
+    //MARK: - Setup views
     func loadMessages() {
-        db.collection(K.FStore.collectionName).addSnapshotListener { (querySnapshot, error) in
+        db.collection(K.FStore.collectionName)
+            .order(by: K.FStore.dateField)
+            .addSnapshotListener { (querySnapshot, error) in
             self.messages = []
             if let e = error {
                 print("There was an issue retrieving data to Firestore: \(e)")
@@ -49,7 +54,8 @@ class ChatViewController: UIViewController {
             }
         }
     }
-    
+ 
+    //MARK: - Actions
     @IBAction func senderPressed(_ sender: UIButton) {
         if let messageBody = messageTextfield.text, let messageSender = Auth.auth().currentUser?.email {
             db.collection(K.FStore.collectionName).addDocument(data: [
@@ -76,6 +82,7 @@ class ChatViewController: UIViewController {
     }
 }
 
+//MARK: - Extension for Controller
 extension ChatViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
