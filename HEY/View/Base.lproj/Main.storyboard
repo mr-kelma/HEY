@@ -90,7 +90,9 @@
                             <constraint firstItem="qbn-WW-FwU" firstAttribute="leading" secondItem="SD6-Bq-AqS" secondAttribute="leading" id="yS7-rY-HHa"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="9qs-vt-ytN"/>
+                    <navigationItem key="navigationItem" id="9qs-vt-ytN">
+                        <barButtonItem key="backBarButtonItem" title="Exit" id="EF5-P9-6YR"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageLabel" destination="R4f-Al-yHm" id="Uqe-5L-1Mv"/>
                         <outlet property="textLabel" destination="oOc-5K-whA" id="1ab-2O-8bk"/>
@@ -405,7 +407,7 @@
         <designable name="oOc-5K-whA"/>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="F3t-5D-B6y"/>
+        <segue reference="w1n-vk-TOP"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="HEY Logo" width="170.5" height="170.5"/>
