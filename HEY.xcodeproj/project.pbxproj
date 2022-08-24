@@ -22,6 +22,7 @@
 		70FB6C0028B4BD5C0094E36B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FB6BFF28B4BD5C0094E36B /* Message.swift */; };
 		70FB6C0328B4C4D40094E36B /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FB6C0128B4C4D40094E36B /* MessageCell.swift */; };
 		70FB6C0428B4C4D40094E36B /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70FB6C0228B4C4D40094E36B /* MessageCell.xib */; };
+		70FB6C0628B613970094E36B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 70FB6C0528B613970094E36B /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		70FB6BFF28B4BD5C0094E36B /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		70FB6C0128B4C4D40094E36B /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		70FB6C0228B4C4D40094E36B /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		70FB6C0528B613970094E36B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		EFEDBA2E927A7D3C7E488293 /* Pods-HEY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HEY.debug.xcconfig"; path = "Target Support Files/Pods-HEY/Pods-HEY.debug.xcconfig"; sourceTree = "<group>"; };
 		F9A8FAB1E8D349AEA5A04B66 /* Pods-HEY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HEY.release.xcconfig"; path = "Target Support Files/Pods-HEY/Pods-HEY.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +100,7 @@
 		70D16974287C302C00D2A971 = {
 			isa = PBXGroup;
 			children = (
+				70FB6C0528B613970094E36B /* .gitignore */,
 				70D1697F287C302C00D2A971 /* HEY */,
 				70D1697E287C302C00D2A971 /* Products */,
 				FA0CDFB7935D41DC97AD9844 /* Pods */,
@@ -203,6 +206,7 @@
 				70D1698D287C302F00D2A971 /* LaunchScreen.storyboard in Resources */,
 				707E520F2886E42800C4A75B /* GoogleService-Info.plist in Resources */,
 				70D1698A287C302F00D2A971 /* Assets.xcassets in Resources */,
+				70FB6C0628B613970094E36B /* .gitignore in Resources */,
 				70D16988287C302C00D2A971 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
