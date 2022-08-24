@@ -48,6 +48,7 @@
                         </subviews>
                     </stackView>
                 </subviews>
+                <color key="backgroundColor" name="BrandLight"/>
                 <constraints>
                     <constraint firstItem="HAr-Oo-Cgb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="4Kp-G1-wRC"/>
                     <constraint firstAttribute="bottom" secondItem="HAr-Oo-Cgb" secondAttribute="bottom" constant="10" id="H1I-9L-N2d"/>
