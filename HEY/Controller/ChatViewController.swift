@@ -34,27 +34,27 @@ class ChatViewController: UIViewController {
         db.collection(K.FStore.collectionName)
             .order(by: K.FStore.dateField)
             .addSnapshotListener { (querySnapshot, error) in
-            self.messages = []
-            if let e = error {
-                print("There was an issue retrieving data to Firestore: \(e)")
-            } else {
-                if let snapshotDocuments =  querySnapshot?.documents {
-                    for doc in snapshotDocuments {
-                        let data = doc.data()
-                        if let messageSender = data[K.FStore.senderField] as? String, let messageBody = data[K.FStore.bodyField] as? String {
-                            let newMessage = Message(sender: messageSender, body: messageBody)
-                            self.messages.append(newMessage)
-                            
-                            DispatchQueue.main.async {
-                                self.tableView.reloadData()
+                self.messages = []
+                if let e = error {
+                    print("There was an issue retrieving data to Firestore: \(e)")
+                } else {
+                    if let snapshotDocuments =  querySnapshot?.documents {
+                        for doc in snapshotDocuments {
+                            let data = doc.data()
+                            if let messageSender = data[K.FStore.senderField] as? String, let messageBody = data[K.FStore.bodyField] as? String {
+                                let newMessage = Message(sender: messageSender, body: messageBody)
+                                self.messages.append(newMessage)
+                                
+                                DispatchQueue.main.async {
+                                    self.tableView.reloadData()
+                                }
                             }
                         }
                     }
                 }
             }
-        }
     }
- 
+    
     //MARK: - Actions
     @IBAction func senderPressed(_ sender: UIButton) {
         if let messageBody = messageTextfield.text, let messageSender = Auth.auth().currentUser?.email {
@@ -89,10 +89,28 @@ extension ChatViewController: UITableViewDataSource {
         return messages.count
     }
     
+    //Setting cell for messages
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let message = messages[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
+        cell.messageLabel.text = message.body
         
-        cell.messageLabel.text = messages[indexPath.row].body
+        //Message from the current user
+        if message.sender == Auth.auth().currentUser?.email {
+            cell.leftImageView.isHidden = true
+            cell.rightImageView.isHidden = false
+            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.blue)
+            cell.messageLabel.textColor = UIColor(named: K.BrandColors.light)
+        }
+        
+        //Message from the another user
+        else {
+            cell.leftImageView.isHidden = false
+            cell.rightImageView.isHidden = true
+            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.ligtBlue)
+            cell.messageLabel.textColor = UIColor(named: K.BrandColors.light)
+        }
+        
         return cell
     }
 }

@@ -12,7 +12,8 @@ class MessageCell: UITableViewCell {
     //MARK: - Views
     @IBOutlet weak var messageBubble: UIView!
     @IBOutlet weak var messageLabel: UILabel!
-    @IBOutlet weak var avatarImage: UIImageView!
+    @IBOutlet weak var rightImageView: UIImageView!
+    @IBOutlet weak var leftImageView: UIImageView!
     
     //MARK: - Lifecycle
     override func awakeFromNib() {
