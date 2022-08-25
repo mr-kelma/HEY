@@ -14,6 +14,18 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
     
+    //MARK: - Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        emailTextfield.attributedPlaceholder = NSAttributedString(
+            string: "Email",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        passwordTextfield.attributedPlaceholder = NSAttributedString(
+            string: "Password",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+    }
+    
+    
     //MARK: - Actions
     @IBAction func loginPressed(_ sender: UIButton) {
         if let email = emailTextfield.text, let password = passwordTextfield.text {

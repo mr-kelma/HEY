@@ -17,9 +17,14 @@ class WelcomeViewController: UIViewController {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        textLabel.text = K.greeting
         rotateView(targetView: imageLabel)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        textLabel.text = K.greeting
+    }
+    
 }
 
 //MARK: - Extension for Controller

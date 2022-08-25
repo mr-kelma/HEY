@@ -23,9 +23,13 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        messageTextfield.delegate = self
         title = K.appName
         navigationItem.hidesBackButton = true
         tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
+        messageTextfield.attributedPlaceholder = NSAttributedString(
+            string: "Write your message...",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         loadMessages()
     }
     
@@ -47,6 +51,8 @@ class ChatViewController: UIViewController {
                                 
                                 DispatchQueue.main.async {
                                     self.tableView.reloadData()
+                                    let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
+                                    self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
                                 }
                             }
                         }
@@ -57,19 +63,7 @@ class ChatViewController: UIViewController {
     
     //MARK: - Actions
     @IBAction func senderPressed(_ sender: UIButton) {
-        if let messageBody = messageTextfield.text, let messageSender = Auth.auth().currentUser?.email {
-            db.collection(K.FStore.collectionName).addDocument(data: [
-                K.FStore.senderField : messageSender,
-                K.FStore.bodyField : messageBody,
-                K.FStore.dateField: Date().timeIntervalSince1970
-            ]) { (error) in
-                if let e = error {
-                    print("There was an issue saving data to Firestore: \(e)")
-                } else {
-                    print("Successfully saved data.")
-                }
-            }
-        }
+        sendingMessages()
     }
     
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
@@ -80,9 +74,29 @@ class ChatViewController: UIViewController {
             print("Error signing out: %@", signOutError)
         }
     }
+    
+    //MARK: - Sending messages
+    func sendingMessages() {
+        if let messageBody = messageTextfield.text, let messageSender = Auth.auth().currentUser?.email {
+            db.collection(K.FStore.collectionName).addDocument(data: [
+                K.FStore.senderField : messageSender,
+                K.FStore.bodyField : messageBody,
+                K.FStore.dateField: Date().timeIntervalSince1970
+            ]) { (error) in
+                if let e = error {
+                    print("There was an issue saving data to Firestore: \(e)")
+                } else {
+                    
+                    DispatchQueue.main.async {
+                    self.messageTextfield.text = ""
+                    }
+                }
+            }
+        }
+    }
 }
 
-//MARK: - Extension for Controller
+//MARK: - Extension UITableViewDataSource
 extension ChatViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -112,5 +126,14 @@ extension ChatViewController: UITableViewDataSource {
         }
         
         return cell
+    }
+}
+
+//MARK: - Extension UITextFieldDelegate
+extension ChatViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        sendingMessages()
+        return true
     }
 }

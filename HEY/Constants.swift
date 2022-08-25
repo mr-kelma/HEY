@@ -6,7 +6,7 @@
 //
 
 struct K {
-    static let appName = "HEY"
+    static let appName = "HEY!"
     static let greeting = "Let's communicate!"
     static let cellIdentifier = "ReusableCell"
     static let cellNibName = "MessageCell"
